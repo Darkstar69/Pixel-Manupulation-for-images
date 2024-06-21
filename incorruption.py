@@ -37,12 +37,15 @@ def banner():
 
 # main method where all the methods are collected and shown
 def main():
-    # try:
+    try:
         choice = menu()
         if choice == 1:
             path = input("Enter image path : ")
             key = int(input("Enter secret key (numbers only) : "))
-            encrypt_image(path, key)
+            dots = "."
+            while(encrypt_image(path, key)):
+                print("hello")
+            
         elif choice == 2:
             path = input("Enter image path : ")
             key = int(input("Enter secret key (numbers only) : "))
@@ -50,7 +53,7 @@ def main():
         else:
             print("Exiting script ! Bye !")
             run("exit")
-    # except:
+    except:
         print("Exiting script ! Bye !")
         run("exit")
 

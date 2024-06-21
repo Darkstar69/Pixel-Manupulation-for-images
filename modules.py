@@ -1,6 +1,8 @@
 # importing required libraries 
 from PIL import Image
 import numpy as np
+import time
+from tqdm import tqdm
 
 # encryption method
 def encrypt_image(image_path, key):
@@ -22,6 +24,8 @@ def encrypt_image(image_path, key):
      # Store the permutation indices for decryption
     np.save('key.npy', permutation_indices)
     
+    print("Encrypting image.....") # encrypting image message
+    
     # encrypting the array using xor
     encrypted_array = np.bitwise_xor(shuffeld_array, key % 256)
     
@@ -33,7 +37,7 @@ def encrypt_image(image_path, key):
     
     # saving the image with new name
     encrypted_img.save('encrypted_img.png')
-    
+
     # #success message 
     print("Image encryption successfull")
     
@@ -49,6 +53,8 @@ def decrypt_image(image_path, key):
     
     # converting to flattend array
     flattend_array = encrypted_array.flatten()
+    
+    print("Encrypting image.....") # decrypting image message
     
     # reversing the xor 
     decrypted_array = np.bitwise_xor(flattend_array, key % 256)
