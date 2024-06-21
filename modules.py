@@ -1,8 +1,6 @@
 # importing required libraries 
 from PIL import Image
 import numpy as np
-import time
-from tqdm import tqdm
 
 # encryption method
 def encrypt_image(image_path, key):

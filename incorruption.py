@@ -42,10 +42,7 @@ def main():
         if choice == 1:
             path = input("Enter image path : ")
             key = int(input("Enter secret key (numbers only) : "))
-            dots = "."
-            while(encrypt_image(path, key)):
-                print("hello")
-            
+            encrypt_image(path, key)
         elif choice == 2:
             path = input("Enter image path : ")
             key = int(input("Enter secret key (numbers only) : "))
