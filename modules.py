@@ -52,7 +52,7 @@ def decrypt_image(image_path, key):
     # converting to flattend array
     flattend_array = encrypted_array.flatten()
     
-    print("Encrypting image.....") # decrypting image message
+    print("Decrypting image.....") # decrypting image message
     
     # reversing the xor 
     decrypted_array = np.bitwise_xor(flattend_array, key % 256)
