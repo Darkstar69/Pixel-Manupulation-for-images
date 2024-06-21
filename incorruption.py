@@ -1,7 +1,7 @@
 # importing modules that are needed
 from modules import *
 import pyfiglet
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
 from os import system as run
 
 # format as short
@@ -37,7 +37,7 @@ def banner():
 
 # main method where all the methods are collected and shown
 def main():
-    try:
+    # try:
         choice = menu()
         if choice == 1:
             path = input("Enter image path : ")
@@ -50,7 +50,7 @@ def main():
         else:
             print("Exiting script ! Bye !")
             run("exit")
-    except e:
+    # except:
         print("Exiting script ! Bye !")
         run("exit")
 
